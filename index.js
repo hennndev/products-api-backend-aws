@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors())
 mongoose.set("strictQuery", "false")
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect("mongodb+srv://hendra:230897augs@cluster0.03mmlyi.mongodb.net/products?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => {
         app.listen(process.env.PORT || 5000, () => console.log("Server and database connected"))
     })

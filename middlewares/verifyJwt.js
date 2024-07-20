@@ -7,7 +7,7 @@ const verifyJWT = async (req, res, next) => {
             message: "Unauthorized!"
         })
     }
-    jwt.verify(tokenLogin, process.env.TOKEN_SECRET, (err, decoded) => {
+    jwt.verify(tokenLogin, "hendratoken", (err, decoded) => {
         if(err) {
             return res.status(403).json({
                 message: "Forbidden"

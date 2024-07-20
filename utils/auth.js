@@ -5,7 +5,7 @@ const generateToken = (userId, userRole) => {
     return jwt.sign({userInfo: {
         id: userId,
         role: userRole
-    }}, process.env.TOKEN_SECRET, {expiresIn: 60 * 5})
+    }}, "hendratoken", {expiresIn: 60 * 5})
 }
 
 
