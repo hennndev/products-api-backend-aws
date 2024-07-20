@@ -10,9 +10,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({
-    origin: ["*"]
-}))
+app.use(cors())
 mongoose.set("strictQuery", "false")
 mongoose.connect("mongodb+srv://hendra:230897augs@cluster0.03mmlyi.mongodb.net/products?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => {
